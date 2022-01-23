@@ -4,7 +4,7 @@ public:
         //sort in dec order and skip every 3rd elem
         sort(a.begin(),a.end(),greater<int>());
         
-        long long  ans  = 0; int c =1;
+        long long  ans  = 0, c =1;
         for(int i=0;i<a.size();i++){
             if(c%3!=0) ans+=a[i];
             c++;
