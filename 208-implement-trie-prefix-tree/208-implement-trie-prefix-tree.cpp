@@ -1,6 +1,6 @@
-struct Node{
-    int ew ; //end words
-    int sw ; //start words (pref)
+class Node{
+    public:
+    int ew ; int sw ; //end words& start words (pref)
     Node* next[26];
 };
 class Trie {
