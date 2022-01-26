@@ -7,7 +7,8 @@ public:
                 seats++;
                 if(seats>2 and seats%2==1){
                     ans = (ans*(plants+1)) % (int)(1e9+7);
-                    v.push_back(plants+1); plants = 0;
+                    // v.push_back(plants+1); 
+                    plants = 0;
                 }
             }
             if(ch=='P'){
@@ -16,10 +17,7 @@ public:
         }
         if(seats==0 or seats%2==1) return 0; //odd seats 
         
-        // for(auto &e:v){
-        //     // cout<<e<<" ";
-        //     ans = (ans*e)%(int)(1e9+7);
-        // }
+        // for(auto &e:v) ans = (ans*e)%(int)(1e9+7);
         return ans;
     }
 };
