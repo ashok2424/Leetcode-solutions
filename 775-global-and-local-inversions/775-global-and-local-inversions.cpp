@@ -17,7 +17,7 @@ public:
     }
     
     long count_inv(vector<int> &temp,vector<int> &a,int left,int right){
-        long inv = 0;
+        long inv = 0; 
         if(left<right){
             int mid = (left+right)/2;
             
@@ -30,12 +30,11 @@ public:
     }
     
     bool isIdealPermutation(vector<int>& a) {
-        int glob = 0,loc=0,mn = INT_MAX;vector<int>aa(a),temp(a.size());
+        int glob = 0,loc=0; vector<int>aa(a),temp(a.size());
         //glob  = count inv in array using merge sort
         glob = count_inv(temp,a,0,a.size()-1);//always take temp arr to merge
         
-        for(int i=0;i<aa.size()-1;i++) if(aa[i]>aa[i+1]) loc++;
-        return glob==loc;
+        for(int i=0;i<aa.size()-1;i++) if(aa[i]>aa[i+1]) loc++;  return glob==loc;
     }
 };
 
