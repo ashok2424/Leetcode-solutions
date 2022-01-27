@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isIdealPermutation(vector<int>& a) {
-        int max_from_front = 0 , n  = a.size();
+        int max_from_front = 0 ; int  n  = a.size();
         
         for(int i = 0;i<n-2;i++){
             
