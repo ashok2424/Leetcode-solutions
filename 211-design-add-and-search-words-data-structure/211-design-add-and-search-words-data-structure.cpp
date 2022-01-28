@@ -1,16 +1,20 @@
-class Node{
-    public:
-    int ew ; int sw ; //end words& start words (pref)
-    Node* next[26];
-};
+// class Node{
+//     public:
+//     int ew ; int sw ; //end words& start words (pref)
+//     Node* next[26];
+// };
 
 class WordDictionary {
+    class Node{
+        public:
+        int ew ; int sw ; //end words& start words (pref)
+        Node* next[26];
+    };
 public:
     Node* root =new Node();
     WordDictionary() {
         
     }
-    
     void addWord(string word) {
         Node* cur  = root ;
         for(auto &ch:word){
