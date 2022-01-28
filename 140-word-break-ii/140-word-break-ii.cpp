@@ -1,5 +1,7 @@
 class Solution {
-public:unordered_set<string>set;vector<string>ans;
+public:
+    unordered_set<string>set;vector<string>ans;
+    
     void solve(string s,string path){
         if(s.size()==0){
             path.erase(path.end()-1);//just erasing that extra " " at last
@@ -14,7 +16,7 @@ public:unordered_set<string>set;vector<string>ans;
                 solve(suff,path + pref + " " );
             }
         }
-    }//sumeet malik watch rec tree \U0001f525\U0001f525\U0001f525\U0001f525\U0001f525\U0001f525\U0001f525\U0001f525\U0001f525\U0001f525
+    }
     vector<string> wordBreak(string s, vector<string>& dict){
         for(auto &w:dict) set.insert(w);
         solve(s,"");
