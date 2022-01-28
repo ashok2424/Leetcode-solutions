@@ -5,12 +5,13 @@
 // };
 
 class WordDictionary {
+    public:
     class Node{
         public:
         int ew ; int sw ; //end words& start words (pref)
         Node* next[26];
     };
-public:
+
     Node* root =new Node();
     WordDictionary() {
         
