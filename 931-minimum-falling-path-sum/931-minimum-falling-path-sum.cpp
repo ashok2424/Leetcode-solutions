@@ -2,11 +2,9 @@ class Solution {
 public: int dp[101][101];
     int minFallingPathSum(vector<vector<int>>& a) {
     for(int i=0;i<101;i++) for(int j=0;j<101;j++) dp[i][j]=INT_MIN;
-        
-         int ans=solve(0,0,a);
-         for(int i=1;i<a[0].size();i++){
-             int temp = solve(0,i,a);
-             ans = min(ans,temp);
+         int ans=INT_MAX;
+         for(int j=0;j<a[0].size();j++){
+             ans = min(ans,solve(0,j,a));
          }
         return ans;
     }
