@@ -9,9 +9,9 @@ public:
         for(int i = v.size()-1;i>=0;i--){
             double time = (double)(target-v[i].first)/(double)v[i].second;
             
-            if(s.size() and time<=s.top()){
-                continue;
-            }else{
+            //if it cant reach the car in front of it in time...push it
+            //(it make a fleet on own as it cant join the others
+            if(s.empty() or time>s.top()){
                 s.push(time);
             }
         }
